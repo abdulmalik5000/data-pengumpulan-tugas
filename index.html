@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengumpulan Tugas - Aqidah, Bahasa Arab, Hadist</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="flag.png"
+</head>
+<body>
+    <div class="container">
+        <h1>Pengumpulan Tugas Pelajaran</h1>
+        
+        <div class="tabs">
+            <button class="tab active" onclick="openTab(event, 'aqidah')">Aqidah</button>
+            <button class="tab" onclick="openTab(event, 'bahasaArab')">Bahasa Arab</button>
+            <button class="tab" onclick="openTab(event, 'hadist')">Hadist</button>
+        </div>
+        
+        <!-- Tab Aqidah -->
+        <div id="aqidah" class="tab-content" style="display: block;">
+            <h2>Pengumpulan Tugas Aqidah</h2>
+            <form id="aqidahForm">
+                <div class="form-group">
+                    <label for="aqidahNama">Nama Siswa:</label>
+                    <input type="text" id="aqidahNama" required>
+                </div>
+                <div class="form-group">
+                    <label for="aqidahKelas">Kelas:</label>
+                    <select id="aqidahKelas" required>
+                        <option value="">Pilih Kelas</option>
+                        <option value="7">Kelas 7</option>
+                        <option value="8">Kelas 8</option>
+                        <option value="9">Kelas 9</option>
+                        <option value="10">Kelas 10</option>
+                        <option value="11">Kelas 11</option>
+                        <option value="12">Kelas 12</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="aqidahJudul">Judul Tugas:</label>
+                    <input type="text" id="aqidahJudul" required>
+                </div>
+                <div class="form-group">
+                    <label for="aqidahDeskripsi">Deskripsi Tugas:</label>
+                    <textarea id="aqidahDeskripsi" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="aqidahTanggal">Tanggal Pengumpulan:</label>
+                    <input type="date" id="aqidahTanggal" required>
+                </div>
+                <button type="submit" class="btn">Kirim Tugas</button>
+            </form>
+            
+            <div class="submissions">
+                <h3>Daftar Pengumpulan Tugas</h3>
+                <div class="search-container">
+                    <input type="text" id="aqidahSearch" placeholder="Cari tugas..." onkeyup="searchTable('aqidahSearch', 'aqidahTable')">
+                </div>
+                <table id="aqidahTable">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Nama Siswa</th>
+                            <th>Kelas</th>
+                            <th>Judul Tugas</th>
+                            <th>Tanggal</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody id="aqidahTableBody">
+                        <!-- Data akan dimasukkan oleh JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <!-- Tab Bahasa Arab -->
+        <div id="bahasaArab" class="tab-content">
+            <h2>Pengumpulan Tugas Bahasa Arab</h2>
+            <form id="bahasaArabForm">
+                <div class="form-group">
+                    <label for="bahasaArabNama">Nama Siswa:</label>
+                    <input type="text" id="bahasaArabNama" required>
+                </div>
+                <div class="form-group">
+                    <label for="bahasaArabKelas">Kelas:</label>
+                    <select id="bahasaArabKelas" required>
+                        <option value="">Pilih Kelas</option>
+                        <option value="7">Kelas 7</option>
+                        <option value="8">Kelas 8</option>
+                        <option value="9">Kelas 9</option>
+                        <option value="10">Kelas 10</option>
+                        <option value="11">Kelas 11</option>
+                        <option value="12">Kelas 12</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="bahasaArabJudul">Judul Tugas:</label>
+                    <input type="text" id="bahasaArabJudul" required>
+                </div>
+                <div class="form-group">
+                    <label for="bahasaArabDeskripsi">Deskripsi Tugas:</label>
+                    <textarea id="bahasaArabDeskripsi" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="bahasaArabTanggal">Tanggal Pengumpulan:</label>
+                    <input type="date" id="bahasaArabTanggal" required>
+                </div>
+                <button type="submit" class="btn">Kirim Tugas</button>
+            </form>
+            
+            <div class="submissions">
+                <h3>Daftar Pengumpulan Tugas</h3>
+                <div class="search-container">
+                    <input type="text" id="bahasaArabSearch" placeholder="Cari tugas..." onkeyup="searchTable('bahasaArabSearch', 'bahasaArabTable')">
+                </div>
+                <table id="bahasaArabTable">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Nama Siswa</th>
+                            <th>Kelas</th>
+                            <th>Judul Tugas</th>
+                            <th>Tanggal</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody id="bahasaArabTableBody">
+                        <!-- Data akan dimasukkan oleh JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <!-- Tab Hadist -->
+        <div id="hadist" class="tab-content">
+            <h2>Pengumpulan Tugas Hadist</h2>
+            <form id="hadistForm">
+                <div class="form-group">
+                    <label for="hadistNama">Nama Siswa:</label>
+                    <input type="text" id="hadistNama" required>
+                </div>
+                <div class="form-group">
+                    <label for="hadistKelas">Kelas:</label>
+                    <select id="hadistKelas" required>
+                        <option value="">Pilih Kelas</option>
+                        <option value="7">Kelas 7</option>
+                        <option value="8">Kelas 8</option>
+                        <option value="9">Kelas 9</option>
+                        <option value="10">Kelas 10</option>
+                        <option value="11">Kelas 11</option>
+                        <option value="12">Kelas 12</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="hadistJudul">Judul Tugas:</label>
+                    <input type="text" id="hadistJudul" required>
+                </div>
+                <div class="form-group">
+                    <label for="hadistDeskripsi">Deskripsi Tugas:</label>
+                    <textarea id="hadistDeskripsi" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="hadistTanggal">Tanggal Pengumpulan:</label>
+                    <input type="date" id="hadistTanggal" required>
+                </div>
+                <button type="submit" class="btn">Kirim Tugas</button>
+            </form>
+            
+            <div class="submissions">
+                <h3>Daftar Pengumpulan Tugas</h3>
+                <div class="search-container">
+                    <input type="text" id="hadistSearch" placeholder="Cari tugas..." onkeyup="searchTable('hadistSearch', 'hadistTable')">
+                </div>
+                <table id="hadistTable">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Nama Siswa</th>
+                            <th>Kelas</th>
+                            <th>Judul Tugas</th>
+                            <th>Tanggal</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody id="hadistTableBody">
+                        <!-- Data akan dimasukkan oleh JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
