@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Sistem Pengumpulan Tugas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="flag.png">
+</head>
+<body>
+    <div class="navbar">
+        <div class="container">
+            <h1 class="logo">Madrasah Aliyah</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="tugas.html">Pengumpulan Tugas</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <div class="auth-container">
+        <div class="container">
+            <div class="auth-form">
+                <h2>Buat Akun Baru</h2>
+                <form id="registerForm">
+                    <div class="form-group">
+                        <label for="regUsername">Username</label>
+                        <input type="text" id="regUsername" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="regEmail">Email</label>
+                        <input type="email" id="regEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="regPassword">Password</label>
+                        <input type="password" id="regPassword" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="regConfirmPassword">Konfirmasi Password</label>
+                        <input type="password" id="regConfirmPassword" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="regRole">Role</label>
+                        <select id="regRole" required>
+                            <option value="">Pilih Role</option>
+                            <option value="student">Siswa</option>
+                            <option value="teacher">Guru</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-primary">Daftar</button>
+                </form>
+                <p class="auth-link">Sudah punya akun? <a href="login.html">Login disini</a></p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Madrasah Aliyah. Semua hak dilindungi.</p>
+        </div>
+    </footer>
+
+    <script src="auth.js"></script>
+</body>
+</html>
